@@ -39,9 +39,9 @@ func _ready():
 func set_current_story():
 	randomize()
 	var stories = $StoryBook.get_child_count()
-	var selected_story = randi() % stories
-	current_story.prompts = $StoryBook.get_child(selected_story).prompts
-	current_story.story = $StoryBook.get_child(selected_story).story
+	var selected_story_number = randi() % stories
+	current_story.prompts = $StoryBook.get_child(selected_story_number).prompts
+	current_story.story = $StoryBook.get_child(selected_story_number).story
 	# current_story = template[randi() % template.size()]
 	
 func _on_PlayerText_text_entered(_new_text):
